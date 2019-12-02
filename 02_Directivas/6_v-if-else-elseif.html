@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ganchos de Ciclo de Vida</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="vm">
+    <div v-if='mostrar== 1'>Eset el pimero</div>
+    <div v-else-if='mostrar== 2'>Eset el segundo</div>
+    <div v-else-if='mostrar== 3'>Eset el tercero</div>
+    <div v-else>Eset el ultimo</div>
+
+</div>
+<script>
+    var app= new Vue({
+        el: '#vm',
+        data: {
+            mostrar: 1
+        }
+
+    })
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

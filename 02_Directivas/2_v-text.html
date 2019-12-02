@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ganchos de Ciclo de Vida</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="vm">
+    <div v-text="texto"></div>
+    <p>{{texto}}</p>
+
+
+</div>
+<script>
+    var app= new Vue({
+        el: '#vm',
+        data: {
+            texto: 'Este es el mensaje'
+        }
+
+    })
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

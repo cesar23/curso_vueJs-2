@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ganchos de Ciclo de Vida</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="vm">
+    <ul>
+        <template v-for="(valor,llave) of empleado">
+            <li >
+                {{ llave }} - {{ valor }}
+            </li>
+            <hr>
+        </template>
+
+    </ul>
+
+
+
+</div>
+<script>
+    var app= new Vue({
+        el: '#vm',
+        data: {
+            //vector
+
+            empleado:{
+                nombre:"Cesar",
+                edad:20,
+                nacionalidad:"peruana",
+                profesion:"SIS",
+                empresa:"SUNAT",
+                telefono:"1132132"
+            }
+        }
+
+    })
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

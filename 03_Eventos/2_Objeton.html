@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eventos</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="eventos">
+
+      <div style="height:300px;border:1px solid blue"
+           v-on:mousemove="mostrarUbicacion"
+
+      >
+
+      </div>
+      x: {{x}}, y: {{y}}, contador: {{contador}}
+
+    </div>
+
+  <script>
+      new Vue({
+          el: '#eventos',
+          data: {
+
+              x: 0,
+              y:0,
+              contador:0
+          },
+          methods: {
+              mostrarUbicacion: function(evento){
+                  //mostarr cordenad
+                  this.x = evento.clientX;
+                  this.y = evento.clientY;
+              }
+
+          }
+      })
+
+
+  </script>
+</body>
+</html>

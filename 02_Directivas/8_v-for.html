@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ganchos de Ciclo de Vida</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="vm">
+    <ul>
+        <li v-for="pais in paises">
+            {{ pais }}
+        </li>
+    </ul>
+    <ul>
+        <li v-for="curso in cursos">
+            {{ curso.nombre }}
+        </li>
+    </ul>
+
+
+</div>
+<script>
+    var app= new Vue({
+        el: '#vm',
+        data: {
+            //vector
+            paises: ['peru','colombia','mexico'],
+            //como matriz de objeto
+            cursos:[
+                {nombre:"PHP"},{nombre:"Java"},{nombre:".NET"}
+                ]
+        }
+
+    })
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ganchos de Ciclo de Vida</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="vm">
+     <h3>{{mensaje}}</h3>
+     <h3>{{holaMundo()}}</h3>
+      <!--<img v-bind:src="src_imagen" alt="">-->
+      <img :src="src_imagen" alt="">
+
+  </div>
+  <script>
+     var app= new Vue({
+          el: '#vm',
+          data: {
+              mensaje: 'Este es el mensaje',
+              src_imagen:'https://vuejs.org/images/logo.png'
+          },
+
+          methods : {
+
+              holaMundo : function(){
+                  return 'Hla mundosos';
+              }
+          }
+
+      })
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

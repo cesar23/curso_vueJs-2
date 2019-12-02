@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eventos</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="eventos">
+    <button v-on:click="alerta('Alerta')">Sumar</button>
+
+
+    </div>
+
+    </div>
+  <script>
+      new Vue({
+          el: '#eventos',
+          data: {
+
+              contador: 0
+          },
+          methods: {
+              alerta: function(msg) {
+                  alert(msg);
+              }
+
+          }
+      })
+
+
+  </script>
+</body>
+</html>

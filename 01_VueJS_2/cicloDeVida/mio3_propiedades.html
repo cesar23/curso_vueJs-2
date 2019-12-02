@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ganchos de Ciclo de Vida</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="vm">
+
+      <button v-on:click="primero++">Primero</button>
+      <button v-on:click="segundo++">Segundo</button>
+      <button v-on:click="tercero++">Tercero</button>
+      <button v-on:click="cuarto++">Cuarto</button>
+     <p>Primero:{{ primero }}</p>
+     <p>segundo:{{ segundo }}</p>
+     <p>tercero:{{ tercero}}</p>
+     <p>cuarto:{{ cuarto }}</p>
+     <p>Total:{{ total }}</p>
+
+  </div>
+  <script>
+     var app= new Vue({
+         el: '#vm',
+         data: {
+             primero:0,
+             segundo:0,
+             tercero:0,
+             cuarto:0,
+             suma:0,
+
+         },
+         //Computer Properties
+         //---las  variables computed se ejecuta  cuando una de las variables es  cambiada
+         computed:{
+             total: function(){
+                 return this.primero+this.segundo+this.tercero+this.cuarto;
+                 }
+         }
+
+      })
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ganchos de Ciclo de Vida</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="vm">
+     <h3>{{mensaje}}</h3>
+      <button v-on:click="mensaje = 'ESTE ES EL NUEVO MENSAJE'">Cambiar Mensaje</button>
+      <button v-on:click="destruir">Destruir instancia</button>
+
+  </div>
+  <script>
+     var app= new Vue({
+         el: '#vm',
+         data: {
+             mensaje: 'Este es el mensaje'
+
+         },
+         //Aqui definimos los gancho del primero al ultimo en ejecucion
+         beforeCreate: function () {
+             console.log('Llamando beforeCreate');
+         },
+         created: function () {
+             console.log('Llamando created');
+         },
+         //--
+         beforeMount: function () {
+             console.log('Llamando beforeMount');
+         },
+         mounted: function () {
+             console.log('Llamando mounted');
+         },
+         //-- metodos que se ejecutan cuando se cambia una variable
+         beforeUpdate: function () {
+             console.log('Llamando beforeUpdate');
+         },
+         updated: function () {
+             console.log('Llamando updated');
+         },
+         //------se ejecutan cuando se destruye la instanacia  o la  limpieza
+         beforeDestroy: function () {
+             console.log('Llamando beforeDestroy');
+         },
+         destroyed: function () {
+             console.log('Llamando destroyed');
+         },
+
+         methods : {
+             destruir : function() {
+                 this.$destroy();//destruimos la app
+             }
+         }
+
+      })
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
